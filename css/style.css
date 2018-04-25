@@ -1,0 +1,40 @@
+button{
+margin-top: 10px;
+}
+
+.alert{
+	border-radius: 0; 
+}
+
+footer{
+	background-color: #000000;
+	color: #FFF;
+	padding: 10px 20px;
+	margin-top: 10px;
+}
+
+footer a:link {
+    color: #FFFFFF;
+}
+
+footer a:hover{
+  color: #ccc;
+  
+}
+
+footer a:visited {
+    color: #FFFFFF;
+}
+
+footer a:active {
+    color: #FFFFFF;
+}
+
+footer address{
+	margin-bottom: 0;
+}
+
+.img-logo{
+	width: 35px;
+	height: 35px;
+}
