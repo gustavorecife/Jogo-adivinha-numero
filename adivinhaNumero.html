@@ -43,7 +43,7 @@
 			<address>
 				gustavo.fms1@gmail.com<br>
 				<div>
-					<img class="img-logo" src="https://pbs.twimg.com/profile_images/616309728688238592/pBeeJQDQ_bigger.png" alt="imagem logo do GitHub - gatinho">
+					<img class="img-logo" src="img/github-logo.png" alt="imagem logo do GitHub - gatinho">
 					<a href="https://github.com/gustavorecife" target="_blank">GitHub - Gustavo Macêdo</a>
 				</div>
 			</address>
@@ -88,10 +88,14 @@
 		ipt.focus();
 
 		function verifica(){
-
+			var numero = ipt.value;
+			if(!validarNumero(numero)) {
+				return;
+			}
+			
 			var achou = false;
 			for(var i=0; i < segredos.length; i++){
-				if(ipt.value == segredos[i]){
+				if(numero == segredos[i]){
 					alert("Você ACHOU!");
 					achou = true;
 					break;
@@ -104,6 +108,22 @@
 			ipt.focus();
 		}
 
+		function validarNumero(numero) {
+			var valido = true;
+			if(!numero) {
+				alert("Favor informe um número.");
+				valido = false;
+			} else if(numero < 1 || numero > 10) {
+				alert("Favor informe um número entre 1 e 10");
+				valido = false;
+			}
+
+			ipt.value = "";
+			ipt.focus();
+
+			return valido;
+		}
+		
 		var btn = document.querySelector("button");
 		btn.onclick = verifica;
 
